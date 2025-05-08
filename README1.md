@@ -19,5 +19,11 @@ then do `npx sequelize db:migrate`
         use nodemailer
         run
         `npm i nodemailer`
+
+}
+
+{
+        there should be two different databases for a microservice
+        project
         
 }
