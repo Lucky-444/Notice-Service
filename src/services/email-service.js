@@ -7,13 +7,15 @@ const { Mailer } = require('../config');
 
 async function sendEmail(mailFrom , mailTo , subject , text){
    try {
+        console.log("Sending mail from:");
         const response = await Mailer.sendMail({
                 from : mailFrom,
                 to : mailTo,
                 subject : subject,
                 text : text ,
         })
-
+       
+        console.log(response);
         return response;
    } catch (error) {
         console.log(error);
